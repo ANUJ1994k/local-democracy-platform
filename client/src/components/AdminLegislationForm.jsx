@@ -9,7 +9,7 @@ const AdminLegislationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/legislation/add', {
+      await axios.post('https://local-democracy-platform-lun5.onrender.com/api/legislation/add', {
         title, originalText, summary,
       });
       alert('📘 Legislation added!');

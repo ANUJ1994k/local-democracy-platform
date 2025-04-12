@@ -12,7 +12,7 @@ const LegislationSummary = () => {
 
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/legislation/summarize", {
+      const res = await axios.post("https://local-democracy-platform-lun5.onrender.com/api/legislation/summarize", {
         originalText,
       });
       setSummary(res.data.summary);

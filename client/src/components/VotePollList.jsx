@@ -9,7 +9,7 @@ const VotePollList = () => {
   useEffect(() => {
     const fetchPolls = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/votes/active');
+        const response = await axios.get('https://local-democracy-platform-lun5.onrender.com/api/votes/active');
         setPolls(response.data);
       } catch (error) {
         console.error('Error fetching polls:', error);
@@ -22,7 +22,7 @@ const VotePollList = () => {
   const handleVote = async (pollId, option) => {
     try {
       const userId = 'user_' + Math.random().toString(36).substring(7); 
-      await axios.post(`http://localhost:5000/api/votes/vote/${pollId}`, {
+      await axios.post(`https://local-democracy-platform-lun5.onrender.com/api/votes/vote/${pollId}`, {
         userId,
         option
       });

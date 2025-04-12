@@ -29,7 +29,7 @@ const CreatePoll = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/votes/create', {
+      const response = await axios.post('https://local-democracy-platform-lun5.onrender.com/api/votes/create', {
         question,
         description,
         options,

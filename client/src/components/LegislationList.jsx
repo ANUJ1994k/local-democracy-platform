@@ -5,7 +5,7 @@ const LegislationList = () => {
   const [laws, setLaws] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/legislation/all')
+    axios.get('https://local-democracy-platform-lun5.onrender.com/api/legislation/all')
       .then(res => setLaws(res.data))
       .catch(err => console.error(err));
   }, []);

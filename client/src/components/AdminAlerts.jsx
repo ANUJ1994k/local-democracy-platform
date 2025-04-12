@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 import './AdminAlerts.css'
 
-const socket = io('http://localhost:5000'); // connect to backend
+const socket = io('https://local-democracy-platform-lun5.onrender.com'); // connect to backend
 
 function AdminAlerts() {
     const [alerts, setAlerts] = useState([]);
